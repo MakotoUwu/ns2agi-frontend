@@ -1,6 +1,7 @@
 ---
 // Hero section with scrolling background
 import { GlowingCard } from "./GlowingCard";
+import { SplineScene } from "./ui/splite";
 ---
 
 <section
@@ -85,14 +86,14 @@ import { GlowingCard } from "./GlowingCard";
                         class="w-full h-full object-cover opacity-30"
                     />
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"
                     >
                     </div>
                 </div>
 
                 <!-- Content -->
                 <div
-                    class="absolute inset-0 flex flex-col justify-end p-6 md:p-8"
+                    class="pointer-events-none absolute inset-0 flex flex-col justify-end p-6 md:p-8"
                 >
                     <div>
                         <div class="mb-4 flex items-center gap-3">
@@ -125,20 +126,20 @@ import { GlowingCard } from "./GlowingCard";
             <GlowingCard client:load className="h-full">
                 <!-- Background -->
                 <div class="absolute inset-0 overflow-hidden">
-                    <img
-                        src="/nsrobotics-banner.png"
-                        alt="North Star Robotics"
-                        class="w-full h-full object-cover opacity-30"
+                    <SplineScene
+                        client:load
+                        scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                        className="w-full h-full pointer-events-auto"
                     />
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"
                     >
                     </div>
                 </div>
 
                 <!-- Content -->
                 <div
-                    class="absolute inset-0 flex flex-col justify-end p-6 md:p-8"
+                    class="pointer-events-none absolute inset-0 flex flex-col justify-end p-6 md:p-8"
                 >
                     <div>
                         <div class="mb-4 flex items-center gap-3">

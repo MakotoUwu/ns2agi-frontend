@@ -23,7 +23,7 @@ const LogoItem = ({ logo, rowId, index, hoveredLogo, setHoveredLogo }: LogoItemP
   const width = logo.tier === 'galaxy' ? 'w-52' : logo.tier === 'planet' ? 'w-40' : 'w-32';
   const height = logo.tier === 'galaxy' ? 'h-28' : logo.tier === 'planet' ? 'h-20' : 'h-16';
   const logoMaxSize = logo.tier === 'galaxy' ? 'max-w-24 max-h-16' : logo.tier === 'planet' ? 'max-w-20 max-h-12' : 'max-w-full max-h-full';
-  const padding = logo.tier === 'galaxy' ? 'p-8' : logo.tier === 'planet' ? 'p-6' : 'p-2';
+  const padding = logo.tier === 'galaxy' ? 'p-6' : logo.tier === 'planet' ? 'p-4' : 'p-2';
 
   return (
     <a
@@ -45,7 +45,7 @@ const LogoItem = ({ logo, rowId, index, hoveredLogo, setHoveredLogo }: LogoItemP
             }`} />
           </div>
         )}
-        <div className={`relative z-10 ${padding}`}>
+        <div className={`relative z-10 flex h-full w-full items-center justify-center box-border ${padding}`}>
           <img
             src={logo.src}
             alt={logo.alt}
